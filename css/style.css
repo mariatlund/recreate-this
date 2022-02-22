@@ -36,7 +36,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: var(--primary-color);
   color: var(--primary-font-color);
   padding: 2.5%;
@@ -60,11 +60,9 @@ header a {
 }
 
 header ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  /* gap: 5%; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5%;
   margin: 0%;
 }
 
@@ -74,7 +72,7 @@ header p {
 
 header ul a {
   background-color: var(--secondary-color);
-  padding: 5%;
+  padding: 10%;
   font-size: 90%;
   border-radius: 5px;
 }
@@ -93,7 +91,6 @@ header ul a {
   background-color: var(--secondary-color);
   display: grid;
   grid-template-columns: 1fr;
-  padding-inline: var(--section-padding);
   padding-top: 3%;
   border-radius: 5px;
   width: 100%;
@@ -104,14 +101,16 @@ header ul a {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-evenly;
   list-style: none;
+}
+
+.timer-menu li {
+  padding: 2%;
 }
 
 .current-menu-option {
   background-color: var(--tertiary-color);
-  padding: 3%;
   border-radius: 5px;
 }
 
@@ -131,6 +130,7 @@ header ul a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 140%;
   background-color: var(--primary-font-color);
   color: var(--primary-color);
   padding: 5%;
@@ -144,16 +144,19 @@ header ul a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-transform: uppercase;
-  font-size: 80%;
+  font-size: 75%;
   color: var(--primary-font-color);
-  /* font-weight: bold; */
+  margin-top: 2%;
 }
 
 .current-task {
   color: var(--primary-font-color);
-  font-size: 120%;
+  font-size: 140%;
   text-transform: none;
+  margin-top: 0%;
+  font-weight: bold;
 }
 
 .tasks-menu {
@@ -180,23 +183,47 @@ header ul a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-between;
+  /* width: 100%; */
   margin-top: 2%;
   border-radius: 5px;
+  padding-inline: 5%;
+  font-weight: bold;
 }
 
-.task-name {
-  align-self: flex-start;
+.task-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20%;
+}
+
+.dots {
+  display: block;
+  aspect-ratio: 1/1;
+  width: 20px;
+  border-style: solid;
+  border-color: var(--grey-font-color);
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+.checklist {
+  color: var(--grey-font-color);
+  font-size: 90%;
 }
 
 .add-task {
   background-color: var(--tertiary-color);
-  text-align: center;
+  justify-content: center;
   color: var(--primary-font-color);
   border-style: dashed;
   border-color: var(--secondary-color);
   border-width: 3px;
+}
+
+.unfinished {
+  border-left: solid;
+  border-width: 5px;
 }
 
 .overview-container {
