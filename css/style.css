@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Arial Rounded MT Bold";
+  src: url(../fonts/arlrdbd.ttf);
+  src: url(../fonts/arlrdbd.ttf) format("ttf");
+}
+
+:root {
+  /* FONTS */
+  --primary-font: "Arial Rounded MT Bold", Arial, Sans-serif;
+
+  /* COLORS */
+  --primary-color: #db524d;
+  --secondary-color: #df645f;
+  --tertiary-color: #c94b46;
+  --primary-font-color: #f2f2f2;
+  --secondary-font-color: #591e23;
+  --grey-font-color: #a69798;
+
+  /* PADDING */
+  --section-padding: 2.5%;
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  font-family: var(--primary-font);
+  padding: 0%;
+}
+
+body {
+  margin: 0%;
+}
+
+/* POMODORO SECTION */
+
+.pomo-section {
+  display: block;
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+  padding: var(--section-padding);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+  padding: var(--section-padding);
+  padding-inline: 15%;
+  border-style: solid;
+  border-color: var(--tertiary-color);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+header a {
+  color: var(--primary-font-color);
+  text-decoration: none;
+}
+
+.header-logo {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 5%;
+  margin: 0%;
+}
+
+header p {
+  margin: 0%;
+}
+
+header ul a {
+  background-color: var(--secondary-color);
+  padding: 5%;
+  font-size: 90%;
+  border-radius: 6%;
+}
