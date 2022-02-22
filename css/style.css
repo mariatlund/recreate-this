@@ -17,12 +17,11 @@
   --grey-font-color: #a69798;
 
   /* PADDING */
-  --section-padding: 2.5%;
+  --section-padding: 15%;
 }
 
 * {
   box-sizing: border-box;
-  list-style: none;
   font-family: var(--primary-font);
   padding: 0%;
 }
@@ -31,14 +30,7 @@ body {
   margin: 0%;
 }
 
-/* POMODORO SECTION */
-
-.pomo-section {
-  display: block;
-  background-color: var(--primary-color);
-  color: var(--primary-font-color);
-  padding: var(--section-padding);
-}
+/* HEADER */
 
 header {
   display: flex;
@@ -47,13 +39,14 @@ header {
   justify-content: space-around;
   background-color: var(--primary-color);
   color: var(--primary-font-color);
-  padding: var(--section-padding);
+  padding: 2.5%;
   padding-inline: 15%;
   border-style: solid;
   border-color: var(--tertiary-color);
   border-top: none;
   border-left: none;
   border-right: none;
+  width: 100%;
 }
 
 header a {
@@ -70,8 +63,8 @@ header ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 5%;
+  justify-content: space-evenly;
+  /* gap: 5%; */
   margin: 0%;
 }
 
@@ -83,5 +76,158 @@ header ul a {
   background-color: var(--secondary-color);
   padding: 5%;
   font-size: 90%;
-  border-radius: 6%;
+  border-radius: 5px;
+}
+
+/* POMODORO SECTION */
+
+.pomo-section {
+  display: block;
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+  padding: var(--section-padding);
+  padding-top: 5%;
+}
+
+.timer-container {
+  background-color: var(--secondary-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-inline: var(--section-padding);
+  padding-top: 3%;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.timer-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+}
+
+.current-menu-option {
+  background-color: var(--tertiary-color);
+  padding: 3%;
+  border-radius: 5px;
+}
+
+.timer-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-count p {
+  font-size: 500%;
+  margin: 5%;
+  font-weight: bold;
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--primary-font-color);
+  color: var(--primary-color);
+  padding: 5%;
+  padding-inline: 20%;
+  border-radius: 5px;
+  margin: 5%;
+  margin-bottom: 10%;
+}
+
+.current-task-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 80%;
+  color: var(--primary-font-color);
+  /* font-weight: bold; */
+}
+
+.current-task {
+  color: var(--primary-font-color);
+  font-size: 120%;
+  text-transform: none;
+}
+
+.tasks-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.tasks-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-style: solid;
+  border-top: none;
+  border-inline: none;
+  border-color: var(--secondary-color);
+  border-width: 2px;
+}
+
+.task {
+  background-color: var(--primary-font-color);
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2%;
+  border-radius: 5px;
+}
+
+.task-name {
+  align-self: flex-start;
+}
+
+.add-task {
+  background-color: var(--tertiary-color);
+  text-align: center;
+  color: var(--primary-font-color);
+  border-style: dashed;
+  border-color: var(--secondary-color);
+  border-width: 3px;
+}
+
+.overview-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  margin-top: 5%;
+}
+
+/* TEXT SECTION */
+.text-section {
+  color: var(--secondary-font-color);
+  padding: var(--section-padding);
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.text-section h2 {
+  font-size: 120%;
+}
+
+.text-section a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.text-section ol,
+ul {
+  padding-left: 5%;
 }
